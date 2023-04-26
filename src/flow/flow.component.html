@@ -1,0 +1,16 @@
+<h2>Números aleatórios</h2>
+<input type="number" [(ngModel)]="n" />
+<hr />
+<table border="1">
+  <tr>
+    <th>Número</th>
+    <th>Par ou Impar</th>
+  </tr>
+  <tr *ngFor="let n of getNumbers()">
+    <td>{{ n }}</td>
+    <td>
+      <span *ngIf="n % 2 == 0">PAR</span>
+      <span *ngIf="n % 2 != 0">IMPAR</span>
+    </td>
+  </tr>
+</table>
